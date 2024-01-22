@@ -1,0 +1,28 @@
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 1rem; /* Reduce padding for mobile */
+  }
+
+  .description {
+    font-size: 3rem; /* Decrease font size for mobile */
+  }
+
+  .simpleGrid {
+    flex-direction: column; /* Change the flex direction to stack elements vertically */
+    gap: 2rem; /* Add some vertical spacing between elements */
+  }
+
+  .column {
+    width: 100%; /* Set each column to take full width on mobile */
+    padding: 2rem 0; /* Add some vertical padding to each column */
+  }
+
+  .imageContainer {
+    padding: 0 1rem; /* Add horizontal padding to the image container */
+  }
+
+  .logo,
+  .thirteen {
+    position: static; /* Remove the relative positioning on the logo and thirteen elements */
+  }
+}
