@@ -57,7 +57,7 @@ export default function Home() {
             <Heading mb={4} color="brand.0">
               Introduction to Multi-Signature Wallets
             </Heading>
-            <Text mb={3} color="brand.0">
+            <Text fontSize={["sm", "md"]} mb={3} color="brand.0">
               Multi-signature wallets are the digital equivalent to a multi-key
               safe. They require the consent of multiple key holders to
               authorize transactions. This system is essential for businesses
@@ -66,12 +66,12 @@ export default function Home() {
               transactions is very common in traditional business settings,
               where financial governance demands checks and balances.
             </Text>
-            <Text mb={3} color="brand.0">
+            <Text fontSize={["sm", "md"]} mb={3} color="brand.0">
               In the context of Bitcoin, these wallets are already supported
               natively through the OP_CHECKMULTISIG opcode, which allows
               transactions to require multiple signatures for validation.
             </Text>
-            <Text mb={3} color="brand.0">
+            <Text fontSize={["sm", "md"]} mb={3} color="brand.0">
               Currently, Bitcoin&apos;s native multi-sig capabilities, while
               functional, are somewhat limited in flexibility, leading
               businesses to rely on third-party solutions, which has the
@@ -84,7 +84,7 @@ export default function Home() {
             <Heading mb={4} color="brand.0">
               The Role of OP_CAT in Multi-Signature Wallets
             </Heading>
-            <Text mb={3} color="brand.0">
+            <Text fontSize={["sm", "md"]} mb={3} color="brand.0">
               Functionality of OP_CAT: In Bitcoin&apos;s scripting language,
               OP_CAT is used for concatenating two strings or data elements. In
               multi-signature scenarios, these elements are typically the public
@@ -93,7 +93,7 @@ export default function Home() {
               forming the complex script conditions needed in multi-sig
               transactions.
             </Text>
-            <Text mb={3} color="brand.0">
+            <Text fontSize={["sm", "md"]} mb={3} color="brand.0">
               Enhancing Script Flexibility: OP_CAT re-introduces a degree of
               flexibility to Bitcoin scripting, allowing for more sophisticated
               transaction types. This is particularly relevant for businesses
@@ -133,7 +133,7 @@ export default function Home() {
               <Heading color="brand.200" margin="1.5rem" size="xl">
                 Enhanced Scripting
               </Heading>
-              <Text fontSize={["md", "xl"]} color="brand.0">
+              <Text fontSize={["sm", "md"]} color="brand.0">
                 Seamlessly concatenate values on Bitcoin&apos;s blockchain for
                 more complex and versatile scripts.
               </Text>
@@ -150,7 +150,7 @@ export default function Home() {
               <Heading color="brand.200" margin="1.5rem" size="xl">
                 Flexible Transactions
               </Heading>
-              <Text fontSize={["md", "xl"]} color="brand.0">
+              <Text fontSize={["sm", "md"]} color="brand.0">
                 Enable dynamic transaction structures and multi-condition smart
                 contracts with ease..
               </Text>
@@ -167,7 +167,7 @@ export default function Home() {
               <Heading color="brand.200" margin="1.5rem" size="xl">
                 Quantum Resistance
               </Heading>
-              <Text fontSize={["md", "xl"]} color="brand.0">
+              <Text fontSize={["sm", "md"]} color="brand.0">
                 Facilitate post-quantum cryptographic methods like Lamport
                 Signatures for future-proof security
               </Text>
@@ -185,7 +185,7 @@ export default function Home() {
               p={{ base: "2rem 0rem 2rem 0rem", md: "3rem 10rem 3rem 10rem" }}
             >
               <Heading
-                size="lg"
+                fontSize="6xl"
                 color="white"
                 textAlign={{ base: "center", md: "center" }}
               >
@@ -193,7 +193,7 @@ export default function Home() {
               </Heading>
               <Text
                 color="brand.0"
-                fontSize={["md", "xl"]}
+                fontSize={["md", "lg"]}
                 mt="1rem"
                 textAlign="center"
               >
@@ -217,7 +217,7 @@ export default function Home() {
         >
           <Heading
             className="heading2"
-            fontSize={["2xl", "5xl"]}
+            fontSize={["2xl", "6xl"]}
             padding="0rem 0rem 3rem 0rem"
           >
             Other Potential Applications
@@ -238,7 +238,7 @@ export default function Home() {
               </Heading>
               <Text
                 margin="2rem 1.5rem 1.5rem 1.5rem"
-                fontSize={["md", "xl"]}
+                fontSize={["sm", "md"]}
                 color="brand.0"
                 textAlign="center"
               >
@@ -258,7 +258,7 @@ export default function Home() {
               </Heading>
               <Text
                 margin="2rem 1.5rem 1.5rem 1.5rem"
-                fontSize={["md", "xl"]}
+                fontSize={["sm", "md"]}
                 color="brand.0"
                 textAlign="center"
               >
@@ -277,13 +277,13 @@ export default function Home() {
                 Vaults with Enhanced Security
               </Heading>
               <Text
-                fontSize={["md", "xl"]}
+                fontSize={["sm", "md"]}
                 margin="2rem 1.0rem 1.5rem 1.5rem"
                 color="brand.0"
                 textAlign="center"
               >
                 Constructing Bitcoin vaults that prevent a malicious party from
-                accessing funds even if they have the private key
+                accessing funds even if they have the private key.
               </Text>
             </DarkBackground>
           </SimpleGrid>
@@ -292,7 +292,7 @@ export default function Home() {
           <DarkBackground>
             <Heading
               className="heading2"
-              fontSize={["2xl", "4xl"]}
+              fontSize={["4xl", "6xl"]}
               padding="2rem 0rem 2rem 0rem"
             >
               Community Voices

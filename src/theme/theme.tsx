@@ -22,8 +22,8 @@ const myTheme = extendTheme({
   },
 
   fonts: {
-    heading: `'Roboto', sans serif`,
-    body: `'Roboto', sans serif`,
+    heading: `"Reenie Beanie", cursive`,
+     body: `"Patrick Hand", cursive`,
   },
   fontWeights: {
     normal: 400,
@@ -31,16 +31,16 @@ const myTheme = extendTheme({
     bold: 700,
   },
   fontSizes: {
-    xs: "12px",
-    sm: "14px",
-    md: "16px",
-    lg: "18px",
-    xl: "20px",
-    "2xl": "24px",
-    "3xl": "28px",
-    "4xl": "36px",
-    "5xl": "48px",
-    "6xl": "64px",
+    xs: "18px",
+    sm: "20px",
+    md: "24px",
+    lg: "30px",
+    xl: "36px",
+    "2xl": "40px",
+    "3xl": "46px",
+    "4xl": "52px",
+    "5xl": "58px",
+    "6xl": "72px",
   },
   lineHeights: {
     normal: "normal",

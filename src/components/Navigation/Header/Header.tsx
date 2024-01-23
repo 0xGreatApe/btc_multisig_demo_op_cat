@@ -55,7 +55,7 @@ export default function Header() {
       minWidth="max-content"
       className={styles.header}
       style={{
-        backgroundColor: `rgba(10, 12, 14, 0.8)`, // Adjust the alpha value (0.8) as needed
+        backgroundColor: `rgba(10, 12, 14, 0.9)`, // Adjust the alpha value (0.8) as needed
         borderBottom: scrolled ? "1px solid #F2A900" : "none",
       }}
     >
@@ -102,6 +102,7 @@ export default function Header() {
               {" "}
               <Button
                 variant="ghost"
+                fontFamily="heading"
                 color="brand.0"
                 _hover={{
                   borderColor: "brand.200",
@@ -118,6 +119,7 @@ export default function Header() {
             <Link href="/#intro">
               <Button
                 variant="ghost"
+                fontFamily="heading"
                 color="brand.0"
                 _hover={{
                   borderColor: "brand.200",
@@ -137,6 +139,7 @@ export default function Header() {
               {" "}
               <Button
                 variant="ghost"
+                fontFamily="heading"
                 color="brand.0"
                 _hover={{
                   borderColor: "brand.200",
@@ -153,6 +156,7 @@ export default function Header() {
             <Link href="/#benefits">
               <Button
                 variant="ghost"
+                fontFamily="heading"
                 color="brand.0"
                 _hover={{
                   borderColor: "brand.200",
@@ -172,6 +176,7 @@ export default function Header() {
               {" "}
               <Button
                 variant="ghost"
+                fontFamily="heading"
                 color="brand.0"
                 _hover={{
                   borderColor: "brand.200",
@@ -188,6 +193,7 @@ export default function Header() {
             <Link href="/#demo">
               <Button
                 variant="ghost"
+                fontFamily="heading"
                 color="brand.0"
                 _hover={{
                   borderColor: "brand.200",
@@ -206,6 +212,7 @@ export default function Header() {
             <ScrollLink to="/#community-voices" smooth={true}>
               <Button
                 variant="ghost"
+                fontFamily="heading"
                 color="brand.0"
                 _hover={{
                   borderColor: "brand.200",
@@ -222,6 +229,7 @@ export default function Header() {
             <Link href="/#community-voices">
               <Button
                 variant="ghost"
+                fontFamily="heading"
                 color="brand.0"
                 _hover={{
                   borderColor: "brand.200",
@@ -244,6 +252,7 @@ export default function Header() {
             <Button
               color="brand.0"
               fontSize="2xl"
+              fontFamily="heading"
               fontWeight="normal"
               _hover={{
                 borderColor: "brand.200",
@@ -261,6 +270,7 @@ export default function Header() {
             <Button
               color="brand.0"
               fontSize="2xl"
+              fontFamily="heading"
               fontWeight="normal"
               _hover={{
                 borderColor: "brand.200",
@@ -280,6 +290,7 @@ export default function Header() {
               color="brand.0"
               fontSize="2xl"
               fontWeight="normal"
+              fontFamily="heading"
               _hover={{
                 borderColor: "brand.200",
                 borderBottomWidth: "2px",
@@ -297,6 +308,7 @@ export default function Header() {
               color="brand.0"
               fontSize="2xl"
               fontWeight="normal"
+              fontFamily="heading"
               _hover={{
                 borderColor: "brand.200",
                 borderBottomWidth: "2px",
@@ -315,6 +327,7 @@ export default function Header() {
               color="brand.0"
               fontSize="2xl"
               fontWeight="normal"
+              fontFamily="heading"
               _hover={{
                 borderColor: "brand.200",
                 borderBottomWidth: "2px",
@@ -332,6 +345,7 @@ export default function Header() {
               color="brand.0"
               fontSize="2xl"
               fontWeight="normal"
+              fontFamily="heading"
               _hover={{
                 borderColor: "brand.200",
                 borderBottomWidth: "2px",
@@ -352,6 +366,7 @@ export default function Header() {
               color="brand.0"
               fontSize="2xl"
               fontWeight="normal"
+              fontFamily="heading"
               _hover={{
                 borderColor: "brand.200",
                 borderBottomWidth: "2px",
@@ -370,6 +385,7 @@ export default function Header() {
               color="brand.0"
               fontSize="2xl"
               fontWeight="normal"
+              fontFamily="heading"
               _hover={{
                 borderColor: "brand.200",
                 borderBottomWidth: "2px",
