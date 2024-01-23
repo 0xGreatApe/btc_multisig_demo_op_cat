@@ -1,17 +1,20 @@
-// components/CodeSnippet.tsx
-import { Box } from '@chakra-ui/react';
+import { FC } from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+// import desired style or create a custom style
+import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
-type CodeSnippetProps = {
-  children: React.ReactNode;
+interface CodeSnippetProps {
+  codeString: string;
   language?: string;
-};
+}
 
-const CodeSnippet: React.FC<CodeSnippetProps> = ({ children, language }) => {
-  return (
-    <Box as="pre" p={4} overflowX="auto" bg="gray.800" color="white" borderRadius="md">
-      {children}
-    </Box>
-  );
-};
+const CodeSnippet: FC<CodeSnippetProps> = ({
+  codeString,
+  language = "jsx",
+}) => (
+  <SyntaxHighlighter language={language} style={materialDark}>
+    {codeString}
+  </SyntaxHighlighter>
+);
 
 export default CodeSnippet;

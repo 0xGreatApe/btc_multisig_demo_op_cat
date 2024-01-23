@@ -3,6 +3,7 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Layout from "@/components/Layout/Layout";
 import { TwitterTweetEmbed } from "react-twitter-embed";
+import CodeSnippet from "@/components/CodeSnippet";
 import {
   Box,
   Flex,
@@ -29,6 +30,46 @@ export default function Home() {
   const handleLinkClick = () => {
     setIsClicked(true);
   };
+
+  const codeStringBasicMultisig: string = `
+  // Pseudo-code for a basic 2-of-3 multi-sig transaction using OP_CHECKMULTISIG
+  <Public Key A>
+  <Public Key B>
+  <Public Key C>
+  3
+  <Signature A>
+  <Signature B>
+  2
+  OP_CHECKMULTISIG
+
+  `;
+  const codeStringMultisigComplex: string = `
+  // High-value transaction script (pre-defined)
+  <Public Key CFO> <Public Key CEO> 2 <Signature CFO> <Signature CEO> 2 CHECKMULTISIG
+  
+  // Routine transaction script (pre-defined)
+  <Public Key Manager> <Public Key Accountant> 2 <Signature Manager> <Signature Accountant> 2 CHECKMULTISIG
+  
+  
+
+  `;
+  const codeStringOpCatMultisig: string = `
+    // Check if the transaction is high-value
+    OP_IF
+        // Concatenate CFO's and CEO's keys and signatures for high-value transactions
+        <Public Key CFO> <Signature CFO> OP_CAT
+        <Public Key CEO> <Signature CEO> OP_CAT
+        2 CHECKMULTISIG
+    OP_ELSE
+        // Concatenate Manager's and Accountant's keys and signatures for routine transactions
+        <Public Key Manager> <Signature Manager> OP_CAT
+        <Public Key Accountant> <Signature Accountant> OP_CAT
+        2 CHECKMULTISIG
+    OP_ENDIF
+  
+
+  `;
+
   return (
     <>
       <Layout>
@@ -75,6 +116,14 @@ export default function Home() {
               </Link>
               .<br></br>
               <br></br>
+              <Text fontSize={["sm", "md"]} mb={3} color="brand.0">
+                In Bitcoin&apos;s scripting language, OP_CAT is used for
+                concatenating two strings or data elements. In multi-signature
+                scenarios, these elements are typically the public keys and
+                signatures required for transaction authorization. OP_CAT&apos;s
+                ability to merge these elements is essential for forming the
+                complex script conditions.
+              </Text>
               But where do Quantum Cats fit in? Udi breaks it down, including
               the massive progress made here:
               <br></br>
@@ -162,19 +211,53 @@ export default function Home() {
             </SimpleGrid>
           </Flex>
 
+          <Box p={4}>
+            {/*  VIDEO */}
+            <Heading
+              className="heading2"
+              fontSize={["4xl", "6xl"]}
+              padding="3rem 0rem 3rem 0rem"
+            >
+              Where is our OP_CAT?
+            </Heading>
+            <iframe
+              src="https://www.youtube.com/embed/CAQTI1Akang"
+              title="YouTube video player"
+              width="800" // Width in pixels
+              height="450" // Height in pixels
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+
+            {/* More components or content */}
+          </Box>
+
           <Box p={5}>
             <Heading
-              className="header-hero"
-              fontSize={{ base: "2rem", md: "2.7rem" }}
-              lineHeight={{ base: "2.8rem", md: "6.8rem" }}
-              padding={{ base: "1rem 0", md: "0" }}
+              className="heading2"
+              fontSize={["4xl", "6xl"]}
+              padding="3rem 0rem 3rem 0rem"
             >
-              Lorum Ipsum Puddings: OP_CAT applications using multi-sig wallets
+              What we are saying about OP_CAT?
             </Heading>
-            <Heading mb={4} color="brand.0">
-              Introduction to Multi-Signature Wallets
+            <SimpleGrid columns={3} spacing={10}>
+              <TwitterTweetEmbed tweetId="1749753101383532963" />
+              <TwitterTweetEmbed tweetId="1749757329044897931" />
+              <TwitterTweetEmbed tweetId="1749767074325635433" />
+            </SimpleGrid>
+            <Heading
+              className="heading2"
+              fontSize={["4xl", "6xl"]}
+              padding="3rem 0rem 3rem 0rem"
+            >
+              Application of OP_CAT for Multi-Sig Wallets
             </Heading>
-            <Text fontSize={["sm", "md"]} mb={3} color="brand.0">
+            <Text
+              padding="1rem 0rem 1rem 0rem"
+              fontSize={["sm", "md"]}
+              mb={3}
+              color="brand.0"
+            >
               Multi-signature wallets are the digital equivalent to a multi-key
               safe. They require the consent of multiple key holders to
               authorize transactions. This system is essential for businesses
@@ -183,46 +266,137 @@ export default function Home() {
               transactions is very common in traditional business settings,
               where financial governance demands checks and balances.
             </Text>
-            <Text fontSize={["sm", "md"]} mb={3} color="brand.0">
+            <Text
+              padding="1rem 0rem 1rem 0rem"
+              fontSize={["sm", "md"]}
+              mb={3}
+              color="brand.0"
+            >
               In the context of Bitcoin, these wallets are already supported
               natively through the OP_CHECKMULTISIG opcode, which allows
               transactions to require multiple signatures for validation.
             </Text>
-            <Text fontSize={["sm", "md"]} mb={3} color="brand.0">
+            <Text
+              padding="1rem 0rem 1rem 0rem"
+              fontSize={["sm", "md"]}
+              mb={3}
+              color="brand.0"
+            >
               Currently, Bitcoin&apos;s native multi-sig capabilities, while
               functional, are somewhat limited in flexibility, leading
               businesses to rely on third-party solutions, which has the
-              potential to introduce security risks. This paper proposes using
-              OP_CAT to enhance Bitcoin&apos;s native multi-signature
-              capabilities, aiming to provide a more robust, native solution for
-              business wallets.
+              potential to introduce security risks. This demonstration shows
+              how OP_CAT can be used to enhance Bitcoin&apos;s native
+              multi-signature capabilities. OP_CAT reintroduces flexibility to
+              Bitcoin scripting allowing for more dynamic script conditions than
+              the current OP_CHECKMULTISIG.
+            </Text>
+            <Heading
+              fontSize="3xl"
+              color="white"
+              padding="1rem 0rem 1rem 0rem"
+              textAlign={{ base: "center", md: "center" }}
+            >
+              Basic Bitcoin Multi-Signature Transaction Using OP_CHECKMULTISIG
+            </Heading>
+            <Text
+              padding="1rem 0rem 1rem 0rem"
+              fontSize={["sm", "md"]}
+              mb={3}
+              color="brand.0"
+            >
+              In a simple 2-of-3 multi-sig setup using OP_CHECKMULTISIG, the
+              Bitcoin script requires any two out of three possible signatures
+              to validate a transaction. <br></br>
+              <br></br>
+              Here&apos;s a pseudo-code representation:
+            </Text>
+            <CodeSnippet
+              codeString={codeStringBasicMultisig}
+              language="typescript"
+            />
+            <Text
+              padding="1rem 0rem 1rem 0rem"
+              fontSize={["sm", "md"]}
+              mb={3}
+              color="brand.0"
+            >
+              In this setup, the transaction is authorized if any two out of the
+              three signatures (Signature A, Signature B, Signature C) are
+              provided. If we wanted to augment the functionality so that if a
+              business requires a more complex setup:
             </Text>
 
-            <Heading mb={4} color="brand.0">
-              The Role of OP_CAT in Multi-Signature Wallets
-            </Heading>
-            <Text fontSize={["sm", "md"]} mb={3} color="brand.0">
-              Functionality of OP_CAT: In Bitcoin&apos;s scripting language,
-              OP_CAT is used for concatenating two strings or data elements. In
-              multi-signature scenarios, these elements are typically the public
-              keys and signatures required for transaction authorization.
-              OP_CAT&apos;s ability to merge these elements is essential for
-              forming the complex script conditions needed in multi-sig
-              transactions.
+            <CodeSnippet
+              codeString={codeStringMultisigComplex}
+              language="typescript"
+            />
+            <Text
+              padding="1rem 0rem 1rem 0rem"
+              fontSize={["sm", "md"]}
+              mb={3}
+              color="brand.0"
+            >
+              In this setup, each type of transaction requires a separate,
+              pre-defined script. Dynamic changes based on transaction
+              conditions or hierarchical updates aren&apos;t feasible. The
+              multi-sig wallets need to be predefined with a fixed set of keys,
+              and any changes in the authorization structure would require
+              creating a new wallet or script. There&apos;s no native capability
+              to dynamically alter the set of keys or signatures involved in a
+              transaction based on varying conditions.
             </Text>
-            <Text fontSize={["sm", "md"]} mb={3} color="brand.0">
-              Enhancing Script Flexibility: OP_CAT re-introduces a degree of
-              flexibility to Bitcoin scripting, allowing for more sophisticated
-              transaction types. This is particularly relevant for businesses
-              that require elaborate and secure transaction protocols, as OP_CAT
-              allows for more dynamic script conditions than what is currently
-              possible with OP_CHECKMULTISIG.
+
+            <Heading
+              fontSize="3xl"
+              color="white"
+              padding="1rem 0rem 1rem 0rem"
+              textAlign={{ base: "center", md: "center" }}
+            >
+              Enhanced Multi-Signature Transaction Using OP_CAT
+            </Heading>
+            <Text
+              color="brand.0"
+              fontSize={["sm", "md"]}
+              padding="1rem 0rem 1rem 0rem"
+            >
+              Now, let&apos;s consider a more complex scenario where a business
+              needs a flexible multi-sig setup. For example, a company might
+              require different combinations of signatures based on transaction
+              types or amounts. Here, OP_CAT can dynamically assemble these
+              signature combinations. Furthermore, as a business evolves, this
+              script needs to be dynamic as transaction conditions or
+              hierarchical changes occur within the organization.
+            </Text>
+
+            <CodeSnippet
+              codeString={codeStringOpCatMultisig}
+              language="typescript"
+            />
+            <Text
+              color="brand.0"
+              fontSize={["sm", "md"]}
+              padding="1rem 0rem 0rem 0rem"
+            >
+              In this enhanced script:
+              <br></br>- For high-value transactions, signatures from both the
+              CFO and CEO are required.
+              <br></br>- For routine transactions, signatures from a manager and
+              an accountant suffice.
+              <br></br>
+              <br></br>
+              OP_CAT hypothetically enables the dynamic injection of public keys
+              and signatures into a script. This means you could create scripts
+              that adapt to changes in signature requirements based on specific
+              conditions, like different levels of transaction amounts or
+              changes in the authorization hierarchy. It essentially allows for
+              the on-the-fly construction of multi-signature conditions.
             </Text>
           </Box>
         </Flex>
-        {/* Techniccal IMplementation */}
+        {/* Technical Implementation */}
         <Flex
-          padding={{ base: "2rem 0rem 2rem 0rem", md: "6rem 0rem" }}
+          padding={{ base: "0rem 0rem 2rem 0rem", md: "0rem 0rem" }}
           id="demo"
         >
           <DarkBackground>
@@ -235,27 +409,15 @@ export default function Home() {
                 color="white"
                 textAlign={{ base: "center", md: "center" }}
               >
-                Technical Application using complex MultiSig
+                Demonstration of OP_CAT MultiSig
               </Heading>
-              <Text
-                color="brand.0"
-                fontSize={["md", "lg"]}
-                mt="1rem"
-                textAlign="center"
-              >
-                Now, let&apos;s consider a more complex scenario where a
-                business needs a flexible multi-sig setup. For example, a
-                company might require different combinations of signatures based
-                on transaction types or amounts. Here, OP_CAT can dynamically
-                assemble these signature combinations. Furthermore, as a
-                business evolves, this script needs to be dynamic as transaction
-                conditions or hierarchical changes occur within the
-                organization.
-              </Text>
             </Box>
+
             <MultiSigForm></MultiSigForm>
           </DarkBackground>
         </Flex>
+
+        <Flex></Flex>
         ;{/* How I can Help section*/}
         <Flex
           flexDirection="column"
