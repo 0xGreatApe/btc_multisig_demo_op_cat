@@ -392,10 +392,19 @@ export default function Home() {
                 color="white"
                 textAlign={{ base: "center", md: "center" }}
               >
-                Demonstration of OP_CAT MultiSig
+                Demo of OP_CAT MultiSig
               </Heading>
             </Box>
-
+            <Text
+              color="brand.0"
+              fontSize={["sm", "md"]}
+              padding="1rem 0rem 0rem 0rem"
+            >
+              Below you can test out this simulation of OP_CAT based MultiSig
+              wallets. In this example, you can see how we can dynamically
+              inject conditions for what approvals are required to sucessfully
+              process a transaction.
+            </Text>
             <MultiSigForm></MultiSigForm>
           </DarkBackground>
         </Flex>
