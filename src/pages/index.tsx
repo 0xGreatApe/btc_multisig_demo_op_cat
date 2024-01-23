@@ -125,14 +125,18 @@ export default function Home() {
                 complex script conditions.
               </Text>
               But where do Quantum Cats fit in? Udi breaks it down, including
-              the massive progress made here:
+              the massive progress made{" "}
+              <Link
+                href="https://x.com/udiWertheimer/status/1748917150411067544?s=20"
+                isExternal
+                textDecoration="underline"
+                color="blue.500" // Adjust color as needed
+              >
+                here
+              </Link>
               <br></br>
               <br></br>
             </Text>{" "}
-            <Center>
-              {/* Center both horizontally and vertically */}
-              <TwitterTweetEmbed tweetId="1748917150411067544" />
-            </Center>
           </Box>
 
           {/* Benefits of OP_CAT*/}
