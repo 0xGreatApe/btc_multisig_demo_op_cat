@@ -82,14 +82,6 @@ export default function Home() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="google-site-verification" />
         </Head>
-        <Box
-          display="flex"
-          justifyContent="center"
-          alignItems="center"
-          padding={{ base: "1rem 0", md: "5rem" }}
-        >
-          <Image src="missing_poster.jpg" alt="missing OP_CAT poster" />
-        </Box>
         <Flex
           direction={{ base: "column", md: "column" }}
           justify="space-between"
@@ -149,7 +141,7 @@ export default function Home() {
             <Heading
               className="heading2"
               fontSize={["4xl", "6xl"]}
-              padding="3rem 0rem 3rem 0rem"
+              padding="0rem 0rem 3rem 0rem"
             >
               Benefits Of OP_CAT
             </Heading>
@@ -274,6 +266,15 @@ export default function Home() {
               Bitcoin scripting allowing for more dynamic script conditions than
               the current OP_CHECKMULTISIG.
             </Text>
+
+            <Box
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              padding={{ base: "1rem 0", md: "5rem" }}
+            >
+              <Image src="missing_poster.jpg" alt="missing OP_CAT poster" />
+            </Box>
             <Heading
               fontSize="3xl"
               color="white"
