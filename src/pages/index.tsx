@@ -211,27 +211,6 @@ export default function Home() {
             </SimpleGrid>
           </Flex>
 
-          <Box p={4}>
-            {/*  VIDEO */}
-            <Heading
-              className="heading2"
-              fontSize={["4xl", "6xl"]}
-              padding="3rem 0rem 3rem 0rem"
-            >
-              Where is our OP_CAT?
-            </Heading>
-            <iframe
-              src="https://www.youtube.com/embed/CAQTI1Akang"
-              title="YouTube video player"
-              width="800" // Width in pixels
-              height="450" // Height in pixels
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-
-            {/* More components or content */}
-          </Box>
-
           <Box p={5}>
             <Heading
               className="heading2"
@@ -519,6 +498,32 @@ export default function Home() {
           color="white"
           flexDirection="column"
         >
+          <Box
+            p={4}
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+            padding="0rem 0rem 5rem 0rem"
+          >
+            {/*  VIDEO */}
+            <Heading
+              className="heading2"
+              fontSize={["4xl", "6xl"]}
+              padding="3rem 0rem 3rem 0rem"
+            >
+              Where is our OP_CAT?
+            </Heading>
+            <iframe
+              src="https://www.youtube.com/embed/CAQTI1Akang"
+              title="YouTube video player"
+              width="800" // Width in pixels
+              height="450" // Height in pixels
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </Box>
+
           <DarkBackground>
             <Heading
               className="heading2"
@@ -527,7 +532,7 @@ export default function Home() {
             >
               Resources
             </Heading>
-            <Text fontSize={["sm", "md"]}   padding="0rem 0rem 2rem 0rem">
+            <Text fontSize={["sm", "md"]} padding="0rem 0rem 2rem 0rem">
               Checkout some other great resources about OP_CAT to learn more
               about it <br></br> <br></br>
               <Link
