@@ -7,7 +7,7 @@ export default async (req, res) => {
   if (req.method === "GET") {
     try {
       const params = {
-        query: "OP_CAT -is:retweet", // Search query
+        query: '"OP_CAT"', // Search query
         "tweet.fields": "created_at,author_id", // Fields to return
       };
 
@@ -26,7 +26,13 @@ export default async (req, res) => {
         return res.status(500).json({ message: "Error fetching tweets" });
       }
 
-      res.status(200).json(response.body);
+      // Ensure the response structure matches the TweetsApiResponse interface
+      const tweets = response.body.data.map((tweet) => ({
+        id: tweet.id,
+        text: tweet.text,
+      }));
+
+      res.status(200).json({ data: tweets });
     } catch (error) {
       res.status(500).json({ message: error.message });
     }

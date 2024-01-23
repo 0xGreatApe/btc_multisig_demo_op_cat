@@ -8,7 +8,7 @@ export default function Document() {
       <link rel="apple-touch-icon" href="/favicon.ico" />
       <link rel="icon" href="/favicon.ico" />
       <link
-        href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
         rel="stylesheet"
       />
       <link
