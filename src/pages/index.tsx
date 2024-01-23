@@ -388,7 +388,7 @@ export default function Home() {
               textDecoration="underline"
               color="blue.500" // Adjust color as needed
             >
-              Quantum Cats - Genesis Cat Southeby's Auction
+              Quantum Cats - Genesis Cat Southeby&apos;s Auction
             </Link>
           </Text>
         </Flex>

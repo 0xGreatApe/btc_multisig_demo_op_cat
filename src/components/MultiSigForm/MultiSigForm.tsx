@@ -101,7 +101,7 @@ const MultiSigForm = () => {
       >
         <FormControl id="min-value">
           <Center>
-            <FormLabel fontSize={["xl", "3xl"]}>
+            <FormLabel fontSize={["sm", "xl"]}>
               Set the transaction value that requires CEO/CFO Approval
             </FormLabel>
           </Center>
@@ -125,8 +125,8 @@ const MultiSigForm = () => {
             </Button>
           </HStack>
           <Text
-            margin="1rem 1rem 3rem 1rem"
-            fontSize={["md", "lg"]}
+            margin="1rem 1rem 1.5rem 1rem"
+            fontSize={["sm", "md"]}
             color="brand.200"
           >
             Current Threshold: {currentMinValue}
@@ -136,7 +136,7 @@ const MultiSigForm = () => {
         <Center>
           <FormControl as="fieldset">
             <Center>
-              <FormLabel fontSize={["xl", "3xl"]}>
+              <FormLabel fontSize={["sm", "xl"]}>
                 Select the Initial Authoriser for the Transaction
               </FormLabel>
             </Center>
@@ -160,9 +160,9 @@ const MultiSigForm = () => {
           </FormControl>
         </Center>
 
-        <FormControl margin="1rem 1rem 3rem 1rem" id="transaction-value">
+        <FormControl margin="0rem 1rem 1rem 1rem" id="transaction-value">
           <Center>
-            <FormLabel fontSize={["2xl", "xl"]}>
+            <FormLabel fontSize={["sm", "md"]}>
               Set Transaction Value in BTC
             </FormLabel>
           </Center>
@@ -186,12 +186,12 @@ const MultiSigForm = () => {
             </Button>
           </HStack>
           <Text
-            margin="1rem 1rem 3rem 1rem"
+            margin="0.6rem 1rem 1rem 1rem"
             fontSize={["md", "lg"]}
             color="brand.200"
           >
             {step === 1
-              ? `${initialAuthoriser} sent a tx of ${transactionValue} BTC`
+              ? `${initialAuthoriser} sent a TX of ${transactionValue} BTC`
               : ``}
           </Text>
         </FormControl>
@@ -199,7 +199,7 @@ const MultiSigForm = () => {
         <Center>
           <FormControl as="fieldset">
             <Center>
-              <FormLabel fontSize={["xl", "3xl"]}>
+              <FormLabel fontSize={["sm", "xl"]}>
                 Select the Approver for the TX
               </FormLabel>
             </Center>
@@ -233,7 +233,7 @@ const MultiSigForm = () => {
             </Center>
             <Center>
               <Button
-                margin="3rem 1rem 3rem 1rem"
+                margin="1rem 1rem 2rem 1rem"
                 onClick={handleSubmitApproval}
                 disabled={step === 0}
               >
@@ -244,15 +244,15 @@ const MultiSigForm = () => {
         </Center>
 
         <Box>
-          <Text fontSize={["xl", "3xl"]} fontWeight="bold">
+          <Text fontSize={["xl", "2xl"]} fontWeight="bold">
             TX Status
           </Text>
-          <Text fontSize={["md", "2xl"]} color={getTransactionStatusColor()}>
-            TX State: {transactionStatus}
+          <Text fontSize={["md", "xl"]} color={getTransactionStatusColor()}>
+            {transactionStatus}
           </Text>
           <Center>
             <Button
-              margin="3rem 1rem 3rem 1rem"
+              margin="1.5rem 1rem 3rem 1rem"
               onClick={handleResetDemo}
               disabled={step === 1}
             >
