@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Layout from "@/components/Layout/Layout";
+import { TwitterTweetEmbed } from "react-twitter-embed";
 import {
   Box,
   Flex,
@@ -29,7 +30,7 @@ export default function Home() {
     <>
       <Layout>
         <Head>
-          <title>Multisig on Bitcoin Using OP_CAT</title>
+          <title>OP_CAT - Pudding DAO</title>
           <meta
             name="description"
             content="Using OP_CAT to enable complex multisig operations natively on the bitcoin network"
@@ -37,14 +38,110 @@ export default function Home() {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="google-site-verification" />
         </Head>
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          padding={{ base: "1rem 0", md: "5rem" }}
+        >
+          <Image src="missing_poster.jpg" alt="missing OP_CAT poster" />
+        </Box>
         <Flex
-          direction={{ base: "column", md: "row" }}
+          direction={{ base: "column", md: "column" }}
           justify="space-between"
           align="center"
           p={{ base: "2rem", md: "4rem 2rem" }}
           textAlign={{ base: "center", md: "left" }}
           id="intro"
         >
+          <Box p={5}>
+            {" "}
+            <Heading mb={4} color="brand.0">
+              What, why and how OP_CAT?
+            </Heading>
+            <Text fontSize={["sm", "md"]} mb={3} color="brand.0">
+              WTF is OP_CAT and where do Quantum Cats fit in? <br></br>
+              Udi breaks it down a bit here:
+            </Text>
+            <TwitterTweetEmbed tweetId="1748917150411067544" />
+          </Box>
+
+          {/* Benefits of OP_CAT*/}
+          <Flex
+            id="benefits"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Heading
+              className="heading2"
+              fontSize={["4xl", "6xl"]}
+              padding="3rem 0rem 3rem 0rem"
+            >
+              Benefits Of OP_CAT
+            </Heading>
+            <SimpleGrid
+              className={styles.simpleGrid}
+              columns={{ base: 1, sm: 2, md: 3 }}
+              spacing="2rem"
+            >
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
+                textAlign="center" // Center the text within the box
+              >
+                <Image src="scripting.svg" alt="scripting icon" width="150px" />
+                <Heading color="brand.200" margin="1.5rem" size="xl">
+                  Enhanced Scripting
+                </Heading>
+                <Text fontSize={["sm", "md"]} color="brand.0">
+                  Seamlessly concatenate values on Bitcoin&apos;s blockchain for
+                  more complex and versatile scripts.
+                </Text>
+              </Box>
+
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
+                textAlign="center" // Center the text within the box
+              >
+                <Image
+                  src="transact.svg"
+                  alt="transacting icon"
+                  width="150px"
+                />
+                <Heading color="brand.200" margin="1.5rem" size="xl">
+                  Flexible Transactions
+                </Heading>
+                <Text fontSize={["sm", "md"]} color="brand.0">
+                  Enable dynamic transaction structures and multi-condition
+                  smart contracts with ease..
+                </Text>
+              </Box>
+
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
+                textAlign="center" // Center the text within the box
+              >
+                <Image src="quantum.svg" alt="Quantum svg" width="150px" />
+                <Heading color="brand.200" margin="1.5rem" size="xl">
+                  Quantum Resistance
+                </Heading>
+                <Text fontSize={["sm", "md"]} color="brand.0">
+                  Facilitate post-quantum cryptographic methods like Lamport
+                  Signatures for future-proof security
+                </Text>
+              </Box>
+            </SimpleGrid>
+          </Flex>
+
           <Box p={5}>
             <Heading
               className="header-hero"
@@ -102,77 +199,6 @@ export default function Home() {
               possible with OP_CHECKMULTISIG.
             </Text>
           </Box>
-        </Flex>
-        {/* Benefits of OP_CAT*/}
-        <Flex
-          id="benefits"
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Heading
-            className="heading2"
-            fontSize={["4xl", "6xl"]}
-            padding="3rem 0rem 3rem 0rem"
-          >
-            Benefits Of OP_CAT
-          </Heading>
-          <SimpleGrid
-            className={styles.simpleGrid}
-            columns={{ base: 1, sm: 2, md: 3 }}
-            spacing="2rem"
-          >
-            <Box
-              display="flex"
-              flexDirection="column"
-              alignItems="center"
-              justifyContent="center"
-              textAlign="center" // Center the text within the box
-            >
-              <Image src="scripting.svg" alt="scripting icon" width="150px" />
-              <Heading color="brand.200" margin="1.5rem" size="xl">
-                Enhanced Scripting
-              </Heading>
-              <Text fontSize={["sm", "md"]} color="brand.0">
-                Seamlessly concatenate values on Bitcoin&apos;s blockchain for
-                more complex and versatile scripts.
-              </Text>
-            </Box>
-
-            <Box
-              display="flex"
-              flexDirection="column"
-              alignItems="center"
-              justifyContent="center"
-              textAlign="center" // Center the text within the box
-            >
-              <Image src="transact.svg" alt="transacting icon" width="150px" />
-              <Heading color="brand.200" margin="1.5rem" size="xl">
-                Flexible Transactions
-              </Heading>
-              <Text fontSize={["sm", "md"]} color="brand.0">
-                Enable dynamic transaction structures and multi-condition smart
-                contracts with ease..
-              </Text>
-            </Box>
-
-            <Box
-              display="flex"
-              flexDirection="column"
-              alignItems="center"
-              justifyContent="center"
-              textAlign="center" // Center the text within the box
-            >
-              <Image src="quantum.svg" alt="Quantum svg" width="150px" />
-              <Heading color="brand.200" margin="1.5rem" size="xl">
-                Quantum Resistance
-              </Heading>
-              <Text fontSize={["sm", "md"]} color="brand.0">
-                Facilitate post-quantum cryptographic methods like Lamport
-                Signatures for future-proof security
-              </Text>
-            </Box>
-          </SimpleGrid>
         </Flex>
         {/* Techniccal IMplementation */}
         <Flex

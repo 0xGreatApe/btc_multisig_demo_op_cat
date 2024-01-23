@@ -23,7 +23,7 @@ const myTheme = extendTheme({
 
   fonts: {
     heading: `"Reenie Beanie", cursive`,
-    body: `"Indie Flower", cursive`,
+     body: `"Patrick Hand", cursive`,
   },
   fontWeights: {
     normal: 400,
