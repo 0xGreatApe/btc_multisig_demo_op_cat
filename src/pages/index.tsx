@@ -10,14 +10,17 @@ import {
   Text,
   Button,
   Image,
+  Link,
   SimpleGrid,
   VStack,
+  Center,
 } from "@chakra-ui/react";
 import { Link as ScrollLink } from "react-scroll";
 
 import DarkBackground from "@/components/DarkBackground/DarkBackground";
 import TestimonialsCarousel from "@/components/TestimonialCarousel/TestimonialCarousel";
 import { useState } from "react";
+import MultiSigForm from "@/components/MultiSigForm";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -60,10 +63,27 @@ export default function Home() {
               What, why and how OP_CAT?
             </Heading>
             <Text fontSize={["sm", "md"]} mb={3} color="brand.0">
-              WTF is OP_CAT and where do Quantum Cats fit in? <br></br>
-              Udi breaks it down a bit here:
-            </Text>
-            <TwitterTweetEmbed tweetId="1748917150411067544" />
+              OP_CAT is one of a number of opcodes within the Bitcoin scripting
+              language. You Are El does a fantastic job of explaining it{" "}
+              <Link
+                href="https://opcat.wtf/"
+                isExternal
+                textDecoration="underline"
+                color="blue.500" // Adjust color as needed
+              >
+                here
+              </Link>
+              .<br></br>
+              <br></br>
+              But where do Quantum Cats fit in? Udi breaks it down, including
+              the massive progress made here:
+              <br></br>
+              <br></br>
+            </Text>{" "}
+            <Center>
+              {/* Center both horizontally and vertically */}
+              <TwitterTweetEmbed tweetId="1748917150411067544" />
+            </Center>
           </Box>
 
           {/* Benefits of OP_CAT*/}
@@ -233,6 +253,7 @@ export default function Home() {
                 organization.
               </Text>
             </Box>
+            <MultiSigForm></MultiSigForm>
           </DarkBackground>
         </Flex>
         ;{/* How I can Help section*/}
@@ -331,6 +352,45 @@ export default function Home() {
               <TestimonialsCarousel />
             </Flex>
           </DarkBackground>
+        </Flex>
+        <Flex color="white" flexDirection="column">
+          <Heading
+            className="heading2"
+            fontSize={["4xl", "6xl"]}
+            padding="2rem 0rem 2rem 0rem"
+          >
+            Resources
+          </Heading>
+          <Text fontSize={["sm", "md"]}>
+            Checkout some other great resources about OP_CAT to learn more about
+            it <br></br> <br></br>
+            <Link
+              href="https://twitter.com/QuantumCatsXYZ"
+              isExternal
+              textDecoration="underline"
+              color="blue.500" // Adjust color as needed
+            >
+              Quantum Cats
+            </Link>
+            <br />
+            <Link
+              href="https://twitter.com/TaprootWizards"
+              isExternal
+              textDecoration="underline"
+              color="blue.500" // Adjust color as needed
+            >
+              Taproot Wizards
+            </Link>
+            <br />
+            <Link
+              href="https://www.sothebys.com/en/buy/auction/2024/natively-digital-an-ordinals-curated-sale/genesis-cat"
+              isExternal
+              textDecoration="underline"
+              color="blue.500" // Adjust color as needed
+            >
+              Quantum Cats - Genesis Cat Southeby's Auction
+            </Link>
+          </Text>
         </Flex>
       </Layout>
     </>

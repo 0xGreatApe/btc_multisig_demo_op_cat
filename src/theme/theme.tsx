@@ -23,7 +23,7 @@ const myTheme = extendTheme({
 
   fonts: {
     heading: `"Reenie Beanie", cursive`,
-     body: `"Patrick Hand", cursive`,
+    body: `"Patrick Hand", cursive`,
   },
   fontWeights: {
     normal: 400,
@@ -66,7 +66,19 @@ const myTheme = extendTheme({
     lg: "62em",
     xl: "80em",
   },
-  components: { Button },
+  components: {
+    Button,
+    Radio: {
+      baseStyle: {
+        control: {
+          _checked: {
+            bg: "brand.200", // Set the background color for the checked radio button
+            borderColor: "white",
+          },
+        },
+      },
+    },
+  },
 });
 
 export default myTheme;

@@ -27,8 +27,7 @@ export const buttonStyles = {
     // 5. We can add responsive variants
     "default-button": {
       // "linear-gradient(to right, #d8a63f 0%, #772137 51%, #d8a63f 100%)"
-      background:
-        "brand.70",
+      background: "brand.200",
       margin: "5px",
       h: "50px", // Update py to my
       px: "70px",
