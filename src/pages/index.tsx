@@ -433,10 +433,13 @@ export default function Home() {
           id="demo"
         >
           <DarkBackground>
-            {/* Right Column */}
-            <Box
-              p={{ base: "2rem 0rem 2rem 0rem", md: "3rem 10rem 3rem 10rem" }}
+            <Flex
+              id="multi-sig-description"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
             >
+              {" "}
               <Heading
                 fontSize="6xl"
                 color="white"
@@ -444,17 +447,18 @@ export default function Home() {
               >
                 Demo of OP_CAT MultiSig
               </Heading>
-            </Box>
-            <Text
-              color="brand.0"
-              fontSize={["sm", "md"]}
-              padding="1rem 0rem 0rem 0rem"
-            >
-              Below you can test out this simulation of OP_CAT based MultiSig
-              wallets. In this example, you can see how we can dynamically
-              inject conditions for what approvals are required to sucessfully
-              process a transaction.
-            </Text>
+              <Text
+                color="brand.0"
+                fontSize={["sm", "md"]}
+                padding="1rem 0rem 0rem 0rem"
+              >
+                Below you can test out this simulation of OP_CAT based MultiSig
+                wallets. In this example, you can see how we can dynamically
+                inject conditions for what approvals are required to sucessfully
+                process a transaction.
+              </Text>
+            </Flex>
+
             <MultiSigForm></MultiSigForm>
           </DarkBackground>
         </Flex>

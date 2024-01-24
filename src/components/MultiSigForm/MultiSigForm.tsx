@@ -92,7 +92,7 @@ const MultiSigForm = () => {
   };
 
   return (
-    <Box color="white" padding="1rem 5rem 1rem 5rem">
+    <Box color="white" padding={{ base: "1rem", md: "1rem 5rem" }}>
       <VStack
         spacing={4}
         align="stretch"
