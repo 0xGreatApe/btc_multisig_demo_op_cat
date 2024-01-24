@@ -611,7 +611,7 @@ export default function Home() {
               </Heading>
               <Text fontSize={["sm", "md"]} padding="0rem 0rem 2rem 0rem">
                 Checkout some other great resources about OP_CAT to learn more
-                about it <br></br> <br></br>
+                about it: <br></br>-{" "}
                 <Link
                   href="https://twitter.com/QuantumCatsXYZ"
                   isExternal
@@ -620,7 +620,7 @@ export default function Home() {
                 >
                   Quantum Cats
                 </Link>
-                <br />
+                <br /> -{" "}
                 <Link
                   href="https://twitter.com/TaprootWizards"
                   isExternal
@@ -629,7 +629,7 @@ export default function Home() {
                 >
                   Taproot Wizards
                 </Link>
-                <br />
+                <br /> -{" "}
                 <Link
                   href="https://www.sothebys.com/en/buy/auction/2024/natively-digital-an-ordinals-curated-sale/genesis-cat"
                   isExternal
