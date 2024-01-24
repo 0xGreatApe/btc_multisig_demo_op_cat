@@ -32,7 +32,8 @@ export default function Home() {
   };
 
   const codeStringBasicMultisig: string = `
-  // Pseudo-code for a basic 2-of-3 multi-sig transaction using OP_CHECKMULTISIG
+  // Pseudo-code for a basic 2-of-3 
+  // multi-sig transaction using OP_CHECKMULTISIG
   <Public Key A>
   <Public Key B>
   <Public Key C>
@@ -45,10 +46,14 @@ export default function Home() {
   `;
   const codeStringMultisigComplex: string = `
   // High-value transaction script (pre-defined)
-  <Public Key CFO> <Public Key CEO> 2 <Signature CFO> <Signature CEO> 2 CHECKMULTISIG
+  <Public Key CFO> <Public Key CEO> 2 
+  <Signature CFO> <Signature CEO> 2 
+  CHECKMULTISIG
   
   // Routine transaction script (pre-defined)
-  <Public Key Manager> <Public Key Accountant> 2 <Signature Manager> <Signature Accountant> 2 CHECKMULTISIG
+  <Public Key Manager> <Public Key Accountant> 2 
+  <Signature Manager> <Signature Accountant> 2 
+  CHECKMULTISIG
   
   
 
@@ -56,12 +61,14 @@ export default function Home() {
   const codeStringOpCatMultisig: string = `
     // Check if the transaction is high-value
     OP_IF
-        // Concatenate CFO's and CEO's keys and signatures for high-value transactions
+        // Concatenate CFO's and CEO's keys 
+        // and signatures for high-value transactions
         <Public Key CFO> <Signature CFO> OP_CAT
         <Public Key CEO> <Signature CEO> OP_CAT
         2 CHECKMULTISIG
     OP_ELSE
-        // Concatenate Manager's and Accountant's keys and signatures for routine transactions
+        // Concatenate Manager's and Accountant's 
+        // keys and signatures for routine transactions
         <Public Key Manager> <Signature Manager> OP_CAT
         <Public Key Accountant> <Signature Accountant> OP_CAT
         2 CHECKMULTISIG
@@ -227,7 +234,12 @@ export default function Home() {
             </SimpleGrid>
           </Flex>
 
-          <Box p={5}>
+          <Flex
+            id="multi-sig-description"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Heading
               className="heading2"
               fontSize={["4xl", "6xl"]}
@@ -284,7 +296,7 @@ export default function Home() {
               Basic Bitcoin Multi-Signature Transaction Using OP_CHECKMULTISIG
             </Heading>
             <Text
-              padding="1rem 0rem 1rem 0rem"
+              padding="1rem 0rem 0rem 0rem"
               fontSize={["sm", "md"]}
               mb={3}
               color="brand.0"
@@ -295,10 +307,24 @@ export default function Home() {
               <br></br>
               Here&apos;s a pseudo-code representation:
             </Text>
+          </Flex>
+
+          <Flex
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
             <CodeSnippet
               codeString={codeStringBasicMultisig}
               language="typescript"
             />
+          </Flex>
+
+          <Flex
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Text
               padding="1rem 0rem 1rem 0rem"
               fontSize={["sm", "md"]}
@@ -310,11 +336,22 @@ export default function Home() {
               provided. If we wanted to augment the functionality so that if a
               business requires a more complex setup:
             </Text>
-
+          </Flex>
+          <Flex
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
             <CodeSnippet
               codeString={codeStringMultisigComplex}
               language="typescript"
             />
+          </Flex>
+          <Flex
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Text
               padding="1rem 0rem 1rem 0rem"
               fontSize={["sm", "md"]}
@@ -352,11 +389,22 @@ export default function Home() {
               script needs to be dynamic as transaction conditions or
               hierarchical changes occur within the organization.
             </Text>
-
+          </Flex>
+          <Flex
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
             <CodeSnippet
               codeString={codeStringOpCatMultisig}
               language="typescript"
             />
+          </Flex>
+          <Flex
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Text
               color="brand.0"
               fontSize={["sm", "md"]}
@@ -376,7 +424,7 @@ export default function Home() {
               changes in the authorization hierarchy. It essentially allows for
               the on-the-fly construction of multi-signature conditions.
             </Text>
-          </Box>
+          </Flex>
         </Flex>
         {/* Technical Implementation */}
         <Flex
