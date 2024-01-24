@@ -458,8 +458,14 @@ export default function Home() {
                 process a transaction.
               </Text>
             </Flex>
-
-            <MultiSigForm></MultiSigForm>
+            <Flex
+              id="multi-sig-description"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <MultiSigForm></MultiSigForm>
+            </Flex>
           </DarkBackground>
         </Flex>
         <Flex></Flex>;{/* How I can Help section*/}

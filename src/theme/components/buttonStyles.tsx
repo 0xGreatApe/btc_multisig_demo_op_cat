@@ -26,10 +26,9 @@ export const buttonStyles = {
     }),
     // 5. We can add responsive variants
     "default-button": {
-      // "linear-gradient(to right, #d8a63f 0%, #772137 51%, #d8a63f 100%)"
       background: "brand.200",
       margin: "5px",
-      h: "50px", // Update py to my
+      h: "50px",
       px: "70px",
       textAlign: "center",
       textTransform: "uppercase",
@@ -39,7 +38,9 @@ export const buttonStyles = {
       boxShadow: "0 0 10px #eee",
       borderRadius: "8px",
       border: "1px solid var(--chakra-colors-brand-70)",
-      display: "block",
+      display: "flex", // Use flex display
+      justifyContent: "center", // Center horizontally
+      alignItems: "center", // Center vertically
       _hover: {
         backgroundPosition: "right center",
         color: "#fff",

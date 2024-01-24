@@ -92,7 +92,12 @@ const MultiSigForm = () => {
   };
 
   return (
-    <Box color="white" padding={{ base: "1rem", md: "1rem 5rem" }}>
+    <Box
+      color="white"
+      maxW={{ base: "300px", md: "100%" }}
+      margin="0 auto" // Center the form horizontally
+      padding={{ base: "1rem", md: "1rem 5rem" }}
+    >
       <VStack
         spacing={4}
         align="stretch"
@@ -105,10 +110,14 @@ const MultiSigForm = () => {
               Set the transaction value that requires CEO/CFO Approval
             </FormLabel>
           </Center>
-          <HStack>
+          <Stack
+            direction={{ base: "column", md: "row" }} // Stack vertically on mobile and horizontally on larger screens
+            spacing={2} // Adjust the spacing between elements as needed
+            align={{ md: "center" }} // Center elements vertically on larger screens
+          >
             <Input
               placeholder="Min. Value in BTC"
-              width="70%"
+              width={{ base: "100%", md: "70%" }} // Full width on mobile and 70% width on larger screens
               type="text"
               value={minValue}
               onChange={(e) => {
@@ -123,7 +132,8 @@ const MultiSigForm = () => {
             <Button onClick={handleSetThreshold} disabled={step === 1}>
               Set Threshold
             </Button>
-          </HStack>
+          </Stack>
+
           <Text
             margin="1rem 1rem 1.5rem 1rem"
             fontSize={["sm", "md"]}
@@ -149,7 +159,7 @@ const MultiSigForm = () => {
                 value={initialAuthoriser}
                 isDisabled={step === 1}
               >
-                <Stack direction="row">
+                <Stack direction="row" fontSize={["sm", "xl"]}>
                   <Radio value="CEO">CEO</Radio>
                   <Radio value="CFO">CFO</Radio>
                   <Radio value="Accountant">Accountant</Radio>
@@ -166,9 +176,14 @@ const MultiSigForm = () => {
               Set Transaction Value in BTC
             </FormLabel>
           </Center>
-          <HStack>
+
+          <Stack
+            direction={{ base: "column", md: "row" }} // Stack vertically on mobile and horizontally on larger screens
+            spacing={2} // Adjust the spacing between elements as needed
+            align={{ md: "center" }} // Center elements vertically on larger screens
+          >
             <Input
-              width="70%"
+              width={{ base: "100%", md: "70%" }} // Full width on mobile and 70% width on larger screens
               placeholder="Transaction Value in BTC"
               type="text"
               value={transactionValue}
@@ -184,7 +199,7 @@ const MultiSigForm = () => {
             <Button onClick={handleSubmitTx} disabled={step === 1}>
               Submit TX
             </Button>
-          </HStack>
+          </Stack>
           <Text
             margin="0.6rem 1rem 1rem 1rem"
             fontSize={["md", "lg"]}

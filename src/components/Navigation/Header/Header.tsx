@@ -52,7 +52,6 @@ export default function Header() {
   return (
     <Flex
       as="nav"
-      minWidth="max-content"
       className={styles.header}
       style={{
         backgroundColor: `rgba(10, 12, 14, 0.9)`, // Adjust the alpha value (0.8) as needed
