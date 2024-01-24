@@ -429,7 +429,7 @@ export default function Home() {
         </Flex>
         {/* Technical Implementation */}
         <Flex
-          padding={{ base: "0rem 0rem 2rem 0rem", md: "0rem 0rem" }}
+          padding={{ base: "0rem 2rem 2rem 0rem", md: "0rem 2rem" }}
           id="demo"
         >
           <DarkBackground>
@@ -596,43 +596,50 @@ export default function Home() {
           </Box>
 
           <DarkBackground>
-            <Heading
-              className="heading2"
-              fontSize={["4xl", "6xl"]}
-              padding="0rem 0rem 1rem 0rem"
+            <Flex
+              margin="3rem 0rem rem 0rem"
+              color="white"
+              flexDirection="column"
+              padding={{ base: "0rem 2rem 2rem 2rem", md: "0rem 2rem " }}
             >
-              Resources
-            </Heading>
-            <Text fontSize={["sm", "md"]} padding="0rem 0rem 2rem 0rem">
-              Checkout some other great resources about OP_CAT to learn more
-              about it <br></br> <br></br>
-              <Link
-                href="https://twitter.com/QuantumCatsXYZ"
-                isExternal
-                textDecoration="underline"
-                color="blue.500" // Adjust color as needed
+              <Heading
+                className="heading2"
+                fontSize={["4xl", "6xl"]}
+                padding="0rem 0rem 1rem 0rem"
               >
-                Quantum Cats
-              </Link>
-              <br />
-              <Link
-                href="https://twitter.com/TaprootWizards"
-                isExternal
-                textDecoration="underline"
-                color="blue.500" // Adjust color as needed
-              >
-                Taproot Wizards
-              </Link>
-              <br />
-              <Link
-                href="https://www.sothebys.com/en/buy/auction/2024/natively-digital-an-ordinals-curated-sale/genesis-cat"
-                isExternal
-                textDecoration="underline"
-                color="blue.500" // Adjust color as needed
-              >
-                Quantum Cats - Genesis Cat Southeby&apos;s Auction
-              </Link>
-            </Text>
+                Resources
+              </Heading>
+              <Text fontSize={["sm", "md"]} padding="0rem 0rem 2rem 0rem">
+                Checkout some other great resources about OP_CAT to learn more
+                about it <br></br> <br></br>
+                <Link
+                  href="https://twitter.com/QuantumCatsXYZ"
+                  isExternal
+                  textDecoration="underline"
+                  color="blue.500" // Adjust color as needed
+                >
+                  Quantum Cats
+                </Link>
+                <br />
+                <Link
+                  href="https://twitter.com/TaprootWizards"
+                  isExternal
+                  textDecoration="underline"
+                  color="blue.500" // Adjust color as needed
+                >
+                  Taproot Wizards
+                </Link>
+                <br />
+                <Link
+                  href="https://www.sothebys.com/en/buy/auction/2024/natively-digital-an-ordinals-curated-sale/genesis-cat"
+                  isExternal
+                  textDecoration="underline"
+                  color="blue.500" // Adjust color as needed
+                >
+                  Quantum Cats - Genesis Cat Southeby&apos;s Auction
+                </Link>
+              </Text>
+            </Flex>
           </DarkBackground>
         </Flex>
       </Layout>

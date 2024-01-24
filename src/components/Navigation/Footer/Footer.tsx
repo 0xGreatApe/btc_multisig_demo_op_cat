@@ -8,8 +8,7 @@ const Footer = () => {
     <Flex className={styles.footer}>
       <Flex className={styles.copyright}>
         <Text fontSize={["xs", "sm"]} color="brand.200">
-          © {new Date().getFullYear()} LORUM IPSUM PUDDINGS. Licensed under the
-          MIT License
+          © {new Date().getFullYear()} LORUM IPSUM PUDDINGS.
         </Text>
       </Flex>
 
