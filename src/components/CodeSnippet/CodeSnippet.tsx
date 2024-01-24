@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { materialDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { dark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { Flex, useBreakpointValue } from "@chakra-ui/react";
 
 interface CodeSnippetProps {
@@ -33,7 +33,7 @@ const CodeSnippet: FC<CodeSnippetProps> = ({
     >
       <SyntaxHighlighter
         language={language}
-        style={materialDark}
+        style={dark}
         customStyle={{
           width: syntaxHighlighterWidth,
           minHeight: "100px", // Adjust minimum height as needed

@@ -429,7 +429,7 @@ export default function Home() {
         </Flex>
         {/* Technical Implementation */}
         <Flex
-          padding={{ base: "0rem 2rem 2rem 0rem", md: "0rem 2rem" }}
+          padding={{ base: "0rem 0rem 2rem 0rem", md: "0rem 2rem" }}
           id="demo"
         >
           <DarkBackground>
@@ -441,7 +441,7 @@ export default function Home() {
             >
               {" "}
               <Heading
-                fontSize="6xl"
+                fontSize="5xl"
                 color="white"
                 textAlign={{ base: "center", md: "center" }}
               >

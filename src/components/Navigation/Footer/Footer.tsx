@@ -1,6 +1,6 @@
 import { IconButton, ButtonGroup, Text, Flex } from "@chakra-ui/react";
 import React from "react";
-import { FaGithub, FaMedium, FaTwitter, FaDiscord } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaDiscord } from "react-icons/fa";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
