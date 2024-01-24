@@ -108,16 +108,13 @@ export default function Home() {
               </Link>
               .<br></br>
               <br></br>
-              <Text fontSize={["sm", "md"]} mb={3} color="brand.0">
-                In Bitcoin&apos;s scripting language, OP_CAT is used for
-                concatenating two strings or data elements. In multi-signature
-                scenarios, these elements are typically the public keys and
-                signatures required for transaction authorization. OP_CAT&apos;s
-                ability to merge these elements is essential for forming the
-                complex script conditions.
-              </Text>
-              But where do Quantum Cats fit in? Udi breaks it down, including
-              the massive progress made{" "}
+              In Bitcoin&apos;s scripting language, OP_CAT is used for
+              concatenating two strings or data elements. In multi-signature
+              scenarios, these elements are typically the public keys and
+              signatures required for transaction authorization. OP_CAT&apos;s
+              ability to merge these elements is essential for forming the
+              complex script conditions. But where do Quantum Cats fit in? Udi
+              breaks it down, including the massive progress made{" "}
               <Link
                 href="https://x.com/udiWertheimer/status/1748917150411067544?s=20"
                 isExternal
@@ -206,20 +203,31 @@ export default function Home() {
               </Box>
             </SimpleGrid>
           </Flex>
-
-          <Box p={5}>
+          <Flex
+            id="our-tweets"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
+          >
             <Heading
               className="heading2"
               fontSize={["4xl", "6xl"]}
-              padding="3rem 0rem 3rem 0rem"
+              padding="0rem 0rem 3rem 0rem"
             >
               What we are saying about OP_CAT?
             </Heading>
-            <SimpleGrid columns={3} spacing={10}>
-              <TwitterTweetEmbed tweetId="1749753101383532963" />
+            <SimpleGrid
+              className={styles.simpleGrid}
+              columns={{ base: 1, sm: 2, md: 3 }}
+              spacing="2rem"
+            >
+              <TwitterTweetEmbed tweetId="1749753101383532963" />{" "}
               <TwitterTweetEmbed tweetId="1749757329044897931" />
               <TwitterTweetEmbed tweetId="1749767074325635433" />
             </SimpleGrid>
+          </Flex>
+
+          <Box p={5}>
             <Heading
               className="heading2"
               fontSize={["4xl", "6xl"]}
@@ -267,14 +275,6 @@ export default function Home() {
               the current OP_CHECKMULTISIG.
             </Text>
 
-            <Box
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              padding={{ base: "1rem 0", md: "5rem" }}
-            >
-              <Image src="missing_poster.jpg" alt="missing OP_CAT poster" />
-            </Box>
             <Heading
               fontSize="3xl"
               color="white"
