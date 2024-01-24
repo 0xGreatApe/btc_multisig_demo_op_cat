@@ -259,9 +259,11 @@ const MultiSigForm = () => {
         </Center>
 
         <Box>
-          <Text fontSize={["xl", "2xl"]} fontWeight="bold">
-            TX Status
-          </Text>
+          <Center>
+            <Text fontSize={["xl", "2xl"]} fontWeight="bold">
+              TX Status
+            </Text>
+          </Center>
           <Text fontSize={["md", "xl"]} color={getTransactionStatusColor()}>
             {transactionStatus}
           </Text>

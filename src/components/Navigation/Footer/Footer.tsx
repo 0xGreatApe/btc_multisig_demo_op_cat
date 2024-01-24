@@ -46,18 +46,10 @@ const Footer = () => {
 
       <Flex className={styles.legal}>
         <Text fontSize={["xs", "sm"]} color="brand.200">
-          <a href="/privacy_policy" target="_blank" rel="noopener noreferrer">
-            Privacy policy
-          </a>
+          Privacy policy
         </Text>
         <Text fontSize={["xs", "sm"]} color="brand.200" ml="1rem">
-          <a
-            href="terms_and_conditions"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Terms &amp; conditions
-          </a>
+          Terms &amp; conditions
         </Text>
       </Flex>
     </Flex>

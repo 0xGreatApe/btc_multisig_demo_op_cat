@@ -1,4 +1,3 @@
-// VideoFrame.tsx
 import React from "react";
 import { Box } from "@chakra-ui/react";
 
@@ -14,6 +13,8 @@ const VideoFrame: React.FC<ResponsiveIframeProps> = ({ src, title }) => {
       paddingBottom="56.25%" // Aspect ratio 16:9
       paddingTop="25px"
       height="0"
+      borderRadius="lg" // This will apply a slight border-radius. You can also use a specific value like '10px'
+      overflow="hidden" // Make sure the rounded corners are visible and overflow content is clipped
     >
       <iframe
         src={src}
@@ -24,6 +25,7 @@ const VideoFrame: React.FC<ResponsiveIframeProps> = ({ src, title }) => {
           left: 0,
           width: "100%",
           height: "100%",
+          borderRadius: "inherit", // Ensure the iframe inherits the border-radius from the parent Box
         }}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen

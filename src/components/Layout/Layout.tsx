@@ -17,7 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             direction="column"
             minH="140vh"
             justifyContent={{ base: "center", md: "unset" }}
-            padding={{ md: "0 7rem" }} // Add the padding on desktop view
+            padding={{ md: "0 4rem" }} // Add the padding on desktop view
           >
             <Box
               bg="transparent"

@@ -131,7 +131,7 @@ export default function Home() {
               >
                 here
               </Link>
-              <br></br>
+              .<br></br>
               <br></br>
             </Text>{" "}
           </Box>
@@ -168,7 +168,7 @@ export default function Home() {
                 </Heading>
                 <Text fontSize={["sm", "md"]} color="brand.0">
                   Seamlessly concatenate values on Bitcoin&apos;s blockchain for
-                  more complex and versatile scripts.
+                  more complex & versatile scripts.
                 </Text>
               </Box>
 
@@ -189,7 +189,7 @@ export default function Home() {
                 </Heading>
                 <Text fontSize={["sm", "md"]} color="brand.0">
                   Enable dynamic transaction structures and multi-condition
-                  smart contracts with ease..
+                  smart contracts with ease.
                 </Text>
               </Box>
 
@@ -206,7 +206,7 @@ export default function Home() {
                 </Heading>
                 <Text fontSize={["sm", "md"]} color="brand.0">
                   Facilitate post-quantum cryptographic methods like Lamport
-                  Signatures for future-proof security
+                  Signatures for future-proof security.
                 </Text>
               </Box>
             </SimpleGrid>
@@ -220,7 +220,7 @@ export default function Home() {
             <Heading
               className="heading2"
               fontSize={["4xl", "6xl"]}
-              padding="0rem 0rem 3rem 0rem"
+              padding="2rem 0rem 3rem 0rem"
             >
               What we are saying about OP_CAT?
             </Heading>
@@ -587,7 +587,7 @@ export default function Home() {
             >
               Where is our OP_CAT?
             </Heading>
-            <Box width="full" maxW="560px" mx="auto">
+            <Box width="full" maxW="7200px" mx="auto">
               <VideoFrame
                 src="https://www.youtube.com/embed/CAQTI1Akang"
                 title="YouTube video player"
