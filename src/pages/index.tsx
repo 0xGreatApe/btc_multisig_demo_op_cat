@@ -22,6 +22,7 @@ import DarkBackground from "@/components/DarkBackground/DarkBackground";
 import TestimonialsCarousel from "@/components/TestimonialCarousel/TestimonialCarousel";
 import { useState } from "react";
 import MultiSigForm from "@/components/MultiSigForm";
+import VideoFrame from "@/components/VideoFrame";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -576,14 +577,12 @@ export default function Home() {
             >
               Where is our OP_CAT?
             </Heading>
-            <iframe
-              src="https://www.youtube.com/embed/CAQTI1Akang"
-              title="YouTube video player"
-              width="800" // Width in pixels
-              height="450" // Height in pixels
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            <Box width="full" maxW="560px" mx="auto">
+              <VideoFrame
+                src="https://www.youtube.com/embed/CAQTI1Akang"
+                title="YouTube video player"
+              />
+            </Box>
           </Box>
 
           <DarkBackground>

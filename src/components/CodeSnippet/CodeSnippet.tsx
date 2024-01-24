@@ -12,10 +12,11 @@ const CodeSnippet: FC<CodeSnippetProps> = ({
   codeString,
   language = "jsx",
 }) => {
-  const syntaxHighlighterWidth = useBreakpointValue({
-    base: "90%", // Full width on small screens
-    md: "100%", // Full width on medium and larger screens
-  });
+  // Use '100%' for all screen sizes to fill the container
+  const syntaxHighlighterWidth = "100%";
+
+  // Define responsive max width
+  const maxContainerWidth = useBreakpointValue({ base: "80%", md: "100%" });
 
   // Define responsive font size
   const fontSize = useBreakpointValue({ base: "12px", md: "14px" });
@@ -25,9 +26,9 @@ const CodeSnippet: FC<CodeSnippetProps> = ({
       direction="column"
       justify="center"
       align="center"
-      p={{ base: "1rem", md: "1rem 1rem" }}
+      p={{ base: "2rem", md: "2rem 1rem" }}
       w="100%" // Full width
-      maxW="80%" // Set a maximum width for the container
+      maxW={maxContainerWidth} // Conditional max width
       overflowX="auto" // Enable horizontal scroll on overflow
     >
       <SyntaxHighlighter
