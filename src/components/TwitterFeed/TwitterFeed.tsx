@@ -10,6 +10,7 @@ const TwitterFeed: React.FC = () => {
       try {
         const res = await fetch("/api/twitter");
         const data: TweetsApiResponse = await res.json();
+        console.log("Tweets data:", data);
         setTweets(data.data || []);
         loadTwitterScript();
       } catch (error) {

@@ -23,6 +23,7 @@ import TestimonialsCarousel from "@/components/TestimonialCarousel/TestimonialCa
 import { useState } from "react";
 import MultiSigForm from "@/components/MultiSigForm";
 import VideoFrame from "@/components/VideoFrame";
+import TwitterFeed from "@/components/TwitterFeed";
 
 const inter = Inter({ subsets: ["latin"] });
 

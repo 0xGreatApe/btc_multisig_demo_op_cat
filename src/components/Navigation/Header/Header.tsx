@@ -91,7 +91,7 @@ export default function Header() {
           pos="absolute"
           top="5rem"
           bg="rgba(10, 12, 14, 0.8)"
-          w="120%"
+          w="100%"
           gap="0.5rem"
           p="0rem 0rem 1rem 0rem"
           zIndex={999}

@@ -77,7 +77,7 @@ const TestimonialsCarousel: React.FC = () => {
   };
 
   return (
-    <Box maxWidth={["70vw", "800px"]}>
+    <Box maxWidth={["80vw", "50vw"]}>
       <Slider {...settings} ref={sliderRef}>
         {testimonialData.map((testimonial, index) => (
           <Box

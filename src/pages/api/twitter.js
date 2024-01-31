@@ -1,9 +1,10 @@
 // pages/api/twitter.js
 import needle from "needle";
 
-const token = process.env.TWITTER_BEARER_TOKEN; // Set your Twitter Bearer Token in .env file
+const token = process.env.NEXT_PUBLIC_TWITTER_BEARER_TOKEN; // Set your Twitter Bearer Token in .env file
 
 export default async (req, res) => {
+  console.log("token = ", token);
   if (req.method === "GET") {
     try {
       const params = {
@@ -23,6 +24,8 @@ export default async (req, res) => {
       );
 
       if (response.statusCode !== 200) {
+        console.log(response.statusCode, response.body);
+
         return res.status(500).json({ message: "Error fetching tweets" });
       }
 
