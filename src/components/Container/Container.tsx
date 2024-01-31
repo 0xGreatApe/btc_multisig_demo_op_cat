@@ -6,7 +6,7 @@ export default function Container({
   children,
   size = "default",
   className = "",
-  withPadding = false, // Add a new prop to control the padding
+  withPadding = true, // Add a new prop to control the padding
 }: {
   children: React.ReactNode;
   size?: "default" | "small";

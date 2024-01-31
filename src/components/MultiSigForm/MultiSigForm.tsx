@@ -94,7 +94,7 @@ const MultiSigForm = () => {
   return (
     <Box
       color="white"
-      maxW={{ base: "300px", md: "100%" }}
+      maxW={{ base: "70vw", md: "100vw" }}
       margin="0 auto" // Center the form horizontally
       padding={{ base: "1rem", md: "1rem 5rem" }}
     >

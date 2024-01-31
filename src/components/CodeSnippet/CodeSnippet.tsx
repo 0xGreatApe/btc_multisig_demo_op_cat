@@ -16,7 +16,7 @@ const CodeSnippet: FC<CodeSnippetProps> = ({
   const syntaxHighlighterWidth = "100%";
 
   // Define responsive max width
-  const maxContainerWidth = useBreakpointValue({ base: "80%", md: "100%" });
+  const maxContainerWidth = useBreakpointValue({ base: "80vw", md: "100vw" });
 
   // Define responsive font size
   const fontSize = useBreakpointValue({ base: "12px", md: "14px" });

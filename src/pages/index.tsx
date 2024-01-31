@@ -99,7 +99,7 @@ export default function Home() {
           textAlign={{ base: "center", md: "left" }}
           id="intro"
         >
-          <Box p={5}>
+          <Box >
             {" "}
             <Heading mb={4} color="brand.0">
               What, why and how OP_CAT?
@@ -588,7 +588,7 @@ export default function Home() {
             >
               Where is our OP_CAT?
             </Heading>
-            <Box width="full" maxW="7200px" mx="auto">
+            <Box width="full" mx="auto">
               <VideoFrame
                 src="https://www.youtube.com/embed/CAQTI1Akang"
                 title="YouTube video player"
