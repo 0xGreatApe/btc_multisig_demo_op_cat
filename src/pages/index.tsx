@@ -99,7 +99,7 @@ export default function Home() {
           textAlign={{ base: "center", md: "left" }}
           id="intro"
         >
-          <Box >
+          <Box>
             {" "}
             <Heading mb={4} color="brand.0">
               What, why and how OP_CAT?
@@ -552,15 +552,15 @@ export default function Home() {
           <DarkBackground>
             <Heading
               className="heading2"
-              fontSize={["4xl", "6xl"]}
-              padding="2rem 0rem 2rem 0rem"
+              fontSize={["3xl", "6xl"]}
+              padding="2rem 0rem"
             >
               Community Voices
             </Heading>
             <Flex
               justifyContent="center"
               alignItems="center"
-              padding="0rem 0rem 2rem 0rem"
+              padding="0rem 0rem 0rem 0rem"
             >
               <TestimonialsCarousel />
             </Flex>

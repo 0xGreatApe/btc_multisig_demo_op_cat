@@ -12,6 +12,7 @@ import {
   VStack,
   HStack,
   Center,
+  Wrap,
 } from "@chakra-ui/react";
 
 const MultiSigForm = () => {
@@ -159,12 +160,12 @@ const MultiSigForm = () => {
                 value={initialAuthoriser}
                 isDisabled={step === 1}
               >
-                <Stack direction="row" fontSize={["sm", "xl"]}>
+                <Wrap justify="center" fontSize={["sm", "xl"]}>
                   <Radio value="CEO">CEO</Radio>
                   <Radio value="CFO">CFO</Radio>
                   <Radio value="Accountant">Accountant</Radio>
                   <Radio value="Manager">Manager</Radio>
-                </Stack>
+                </Wrap>
               </RadioGroup>
             </Center>
           </FormControl>
@@ -224,7 +225,7 @@ const MultiSigForm = () => {
                 value={approver}
                 isDisabled={step === 0}
               >
-                <Stack direction="row">
+                <Wrap justify="center" fontSize={["sm", "xl"]}>
                   <Radio value="CEO" isDisabled={topRadioValue === "CEO"}>
                     CEO
                   </Radio>
@@ -243,7 +244,7 @@ const MultiSigForm = () => {
                   >
                     Manager
                   </Radio>
-                </Stack>
+                </Wrap>
               </RadioGroup>
             </Center>
             <Center>

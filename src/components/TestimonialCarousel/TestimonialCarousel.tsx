@@ -25,7 +25,6 @@ const TestimonialsCarousel: React.FC = () => {
       name: "Robin Linus [Founder of bitVM]",
       quote: `op_cat is a tool that can be used to protect and liberate people.`,
     },
-    // Add more testimonials here
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -33,7 +32,6 @@ const TestimonialsCarousel: React.FC = () => {
 
   useEffect(() => {
     const autoScrollInterval = setInterval(() => {
-      // Check if the slider reference is not null
       if (sliderRef.current) {
         const nextSlide =
           currentSlide === testimonialData.length - 1 ? 0 : currentSlide + 1;
@@ -53,7 +51,7 @@ const TestimonialsCarousel: React.FC = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false, // Remove the arrows
+    arrows: false,
     appendDots: (dots: React.ReactNode) => (
       <Box display="flex" justifyContent="center" alignItems="center">
         <ul style={{ margin: "0", padding: "0", display: "flex" }}>{dots}</ul>
@@ -72,12 +70,17 @@ const TestimonialsCarousel: React.FC = () => {
     afterChange: (current: number) => {
       setCurrentSlide(current);
     },
-    autoplay: true, // Enable auto-scroll
-    autoplaySpeed: 10000, // 10 seconds
+    autoplay: true,
+    autoplaySpeed: 10000,
   };
 
   return (
-    <Box maxWidth={["80vw", "50vw"]}>
+    <Box
+      maxWidth={["70vw", "50vw"]}
+      overflowX="hidden"
+      mx="auto"
+      minHeight="400px"
+    >
       <Slider {...settings} ref={sliderRef}>
         {testimonialData.map((testimonial, index) => (
           <Box
@@ -86,13 +89,13 @@ const TestimonialsCarousel: React.FC = () => {
             textAlign="center"
             borderRadius="1px"
             maxWidth={["100%", "100%"]}
-            paddingLeft={["0rem", " 2rem"]}
+            paddingLeft={["0rem", "2rem"]}
             paddingRight={["0rem", "2rem"]}
           >
             <chakra.span color="brand.0">
               <BiSolidQuoteLeft size={24} style={{ marginRight: "8px" }} />
             </chakra.span>
-            <Text fontSize={["md", "xl"]} color="white" px="2=rem">
+            <Text fontSize={["sm", "xl"]} color="white" px="2rem">
               {testimonial.quote.split("\n").map((line, i) => (
                 <React.Fragment key={i}>
                   {line}

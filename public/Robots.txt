@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://opcat.puddingdao.xyz
+
+# Sitemaps
+Sitemap: https://opcat.puddingdao.xyz/sitemap.xml
